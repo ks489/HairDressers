@@ -99,6 +99,14 @@
         <children xmi:type="notation:Node" xmi:id="_63zQsAGVEeep6-DO6tuI1g" type="2003" element="_63vmUAGVEeep6-DO6tuI1g">
           <children xmi:type="notation:Node" xmi:id="_63z3wAGVEeep6-DO6tuI1g" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_63z3wQGVEeep6-DO6tuI1g" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_elycgAGpEeep6-DO6tuI1g" type="3010" element="_els88AGpEeep6-DO6tuI1g">
+              <styles xmi:type="notation:FontStyle" xmi:id="_elycgQGpEeep6-DO6tuI1g" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_elycggGpEeep6-DO6tuI1g"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_fDbawAGpEeep6-DO6tuI1g" type="3010" element="_fDV7MAGpEeep6-DO6tuI1g">
+              <styles xmi:type="notation:FontStyle" xmi:id="_fDbawQGpEeep6-DO6tuI1g" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_fDbawgGpEeep6-DO6tuI1g"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_63z3wgGVEeep6-DO6tuI1g"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_63z3wwGVEeep6-DO6tuI1g"/>
           </children>
@@ -403,16 +411,28 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_63vmUAGVEeep6-DO6tuI1g" name="Products" tooltipText="" outgoingEdges="_23ofgAGYEeep6-DO6tuI1g" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_63vmUAGVEeep6-DO6tuI1g" name="Products" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'EAttribute{platform:/resource/HairDressersRegistrationSystem/model/hairDressersRegSys.ecore#//Products/newAttribute}' must be set&#xA;ERROR : The typed element must have a type" outgoingEdges="_23ofgAGYEeep6-DO6tuI1g" width="12" height="10">
       <target xmi:type="ecore:EClass" href="hairDressersRegSys.ecore#//Products"/>
       <semanticElements xmi:type="ecore:EClass" href="hairDressersRegSys.ecore#//Products"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_63vmUQGVEeep6-DO6tuI1g" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
-      </ownedStyle>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_eluyIAGpEeep6-DO6tuI1g" labelColor="239,41,41" description="_XA5rkAGlEeep6-DO6tuI1g" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_els88AGpEeep6-DO6tuI1g" name="Name : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="hairDressersRegSys.ecore#//Products/Name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="hairDressersRegSys.ecore#//Products/Name"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_lSSJsAGpEeep6-DO6tuI1g" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_fDV7MAGpEeep6-DO6tuI1g" name="newAttribute" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'EAttribute{platform:/resource/HairDressersRegistrationSystem/model/hairDressersRegSys.ecore#//Products/newAttribute.1}' must be set&#xA;ERROR : The typed element must have a type">
+        <target xmi:type="ecore:EAttribute" href="hairDressersRegSys.ecore#//Products/newAttribute"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="hairDressersRegSys.ecore#//Products/newAttribute"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_fDWiQAGpEeep6-DO6tuI1g" labelColor="239,41,41" labelAlignment="LEFT" description="_XA0zEAGlEeep6-DO6tuI1g" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_8ZXxIAGVEeep6-DO6tuI1g" name="Invoice" tooltipText="&#xA;ERROR : There may not be two features named 'newAttribute'&#xA;ERROR : The required feature 'eAttributeType' of 'EAttribute{platform:/resource/HairDressersRegistrationSystem/model/hairDressersRegSys.ecore#//Invoice/newAttribute}' must be set&#xA;ERROR : The typed element must have a type&#xA;ERROR : The required feature 'eAttributeType' of 'EAttribute{platform:/resource/HairDressersRegistrationSystem/model/hairDressersRegSys.ecore#//Invoice/newAttribute.1}' must be set&#xA;ERROR : The typed element must have a type" outgoingEdges="_3vG6EAGYEeep6-DO6tuI1g" incomingEdges="_23ofgAGYEeep6-DO6tuI1g _XBvjoAGmEeep6-DO6tuI1g" width="12" height="10">
       <target xmi:type="ecore:EClass" href="hairDressersRegSys.ecore#//Invoice"/>

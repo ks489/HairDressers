@@ -20,6 +20,8 @@
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Products">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Products/invoice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Products/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Products/newAttribute"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Invoice">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Invoice/products"/>
