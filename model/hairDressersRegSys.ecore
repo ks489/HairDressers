@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="hairDressersRegSys" nsURI="http://www.example.org/hairDressersRegSys"
+    nsPrefix="hairDressersRegSys">
+  <eClassifiers xsi:type="ecore:EClass" name="Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appointment" upperBound="-1"
+        eType="#//Appointment" eOpposite="#//Appointment/service"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Appointment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="service" lowerBound="1"
+        upperBound="-1" eType="#//Service" eOpposite="#//Service/appointment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="invoice" lowerBound="1"
+        eType="#//Invoice" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Date"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StartTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EndTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Products">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="invoice" eType="#//Invoice"
+        eOpposite="#//Invoice/products"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Invoice">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="products" eType="#//Products"
+        eOpposite="#//Products/invoice"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="discounts" eType="#//Discounts"
+        eOpposite="#//Discounts/invoice"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Discounts">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="invoice" eType="#//Invoice"
+        eOpposite="#//Invoice/discounts"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Styling" eSuperTypes="#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Haircuts" eSuperTypes="#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Other" eSuperTypes="#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Customer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="FirstName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LastName"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appointment" lowerBound="1"
+        upperBound="-1" eType="#//Appointment" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceEmployee">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="FirstName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LastName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EmployeeId"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appointment" upperBound="-1"
+        eType="#//Appointment" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
