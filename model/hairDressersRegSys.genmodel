@@ -69,12 +69,14 @@
       <genOperations ecoreOperation="hairDressersRegSys.ecore#//Customer/AddNewCustomer"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//ServiceEmployee">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//ServiceEmployee/EmployeeId"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//ServiceEmployee/appointment"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//ServiceEmployee/Role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//ServiceEmployee/EmployeeId"/>
       <genOperations ecoreOperation="hairDressersRegSys.ecore#//ServiceEmployee/MakeAppointment"/>
       <genOperations ecoreOperation="hairDressersRegSys.ecore#//ServiceEmployee/AddNewEmployee"/>
       <genOperations ecoreOperation="hairDressersRegSys.ecore#//ServiceEmployee/ViewAllAvailableEmployees"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//ServiceEmployee/ViewAppointments"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//ServiceEmployee/RemoveAppointment"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Person/FirstName"/>

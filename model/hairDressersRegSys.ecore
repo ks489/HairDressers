@@ -80,10 +80,12 @@
     <eOperations name="MakeAppointment"/>
     <eOperations name="AddNewEmployee"/>
     <eOperations name="ViewAllAvailableEmployees"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EmployeeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="ViewAppointments"/>
+    <eOperations name="RemoveAppointment"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="appointment" upperBound="-1"
         eType="#//Appointment" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EmployeeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person">
     <eOperations name="GetAge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
