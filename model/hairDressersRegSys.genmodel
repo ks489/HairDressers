@@ -10,6 +10,11 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Service/appointment"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Service/Name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Service/Description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Service/CostPerHour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Service/Time"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Service/AddService"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Service/RemoveService"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Service/ViewAllServices"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Appointment">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Appointment/service"/>
@@ -17,40 +22,73 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Appointment/Date"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Appointment/StartTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Appointment/EndTime"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Appointment/ViewSchedule"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Appointment/AddAppointment"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Products">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Products/invoice"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Products/Name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Products/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Products/Description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Products/Price"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Products/AddProduct"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Products/ViewTotalStock"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Invoice">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Invoice/products"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Invoice/Date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Invoice/InvoiceNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Invoice/Total"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Invoice/discounts"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Invoice/newAttribute"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Invoice/newAttribute.1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Invoice/payment"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Invoice/CalculateTotal"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Invoice/GetDiscount"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Discounts">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Discounts/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Discounts/Description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Discounts/Percentage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Discounts/customer"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Discounts/invoice"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Styling">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Styling/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Styling/IsWash"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Haircuts">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Haircuts/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Haircuts/IsWash"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Haircuts/IsShave"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Haircuts/IsCut"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Other">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Other/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Other/AdditionalInformation"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//Customer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Customer/FirstName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Customer/LastName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Customer/appointment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Customer/discounts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Customer/CustomerId"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Customer/PlaceAppointment"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Customer/AddNewCustomer"/>
     </genClasses>
     <genClasses ecoreClass="hairDressersRegSys.ecore#//ServiceEmployee">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//ServiceEmployee/FirstName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//ServiceEmployee/LastName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//ServiceEmployee/EmployeeId"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//ServiceEmployee/appointment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//ServiceEmployee/Role"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//ServiceEmployee/MakeAppointment"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//ServiceEmployee/AddNewEmployee"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//ServiceEmployee/ViewAllAvailableEmployees"/>
+    </genClasses>
+    <genClasses ecoreClass="hairDressersRegSys.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Person/FirstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Person/LastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Person/Address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Person/DateOfBirth"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Person/GetAge"/>
+    </genClasses>
+    <genClasses ecoreClass="hairDressersRegSys.ecore#//Payment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Payment/PaymentMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Payment/Date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hairDressersRegSys.ecore#//Payment/AmountPaid"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hairDressersRegSys.ecore#//Payment/invoice"/>
+      <genOperations ecoreOperation="hairDressersRegSys.ecore#//Payment/MakePayment"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
