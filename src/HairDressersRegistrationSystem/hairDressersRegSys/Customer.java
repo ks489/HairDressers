@@ -1,0 +1,112 @@
+/**
+ */
+package HairDressersRegistrationSystem.hairDressersRegSys;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Customer</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link HairDressersRegistrationSystem.hairDressersRegSys.Customer#getAppointment <em>Appointment</em>}</li>
+ *   <li>{@link HairDressersRegistrationSystem.hairDressersRegSys.Customer#getDiscounts <em>Discounts</em>}</li>
+ *   <li>{@link HairDressersRegistrationSystem.hairDressersRegSys.Customer#getCustomerId <em>Customer Id</em>}</li>
+ * </ul>
+ *
+ * @see HairDressersRegistrationSystem.hairDressersRegSys.HairDressersRegSysPackage#getCustomer()
+ * @model
+ * @generated
+ */
+public interface Customer extends Person {
+	/**
+	 * Returns the value of the '<em><b>Appointment</b></em>' containment reference list.
+	 * The list contents are of type {@link HairDressersRegistrationSystem.hairDressersRegSys.Appointment}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Appointment</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Appointment</em>' containment reference list.
+	 * @see HairDressersRegistrationSystem.hairDressersRegSys.HairDressersRegSysPackage#getCustomer_Appointment()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<Appointment> getAppointment();
+
+	/**
+	 * Returns the value of the '<em><b>Discounts</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link HairDressersRegistrationSystem.hairDressersRegSys.Discounts#getCustomer <em>Customer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Discounts</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Discounts</em>' reference.
+	 * @see #setDiscounts(Discounts)
+	 * @see HairDressersRegistrationSystem.hairDressersRegSys.HairDressersRegSysPackage#getCustomer_Discounts()
+	 * @see HairDressersRegistrationSystem.hairDressersRegSys.Discounts#getCustomer
+	 * @model opposite="customer"
+	 * @generated
+	 */
+	Discounts getDiscounts();
+
+	/**
+	 * Sets the value of the '{@link HairDressersRegistrationSystem.hairDressersRegSys.Customer#getDiscounts <em>Discounts</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Discounts</em>' reference.
+	 * @see #getDiscounts()
+	 * @generated
+	 */
+	void setDiscounts(Discounts value);
+
+	/**
+	 * Returns the value of the '<em><b>Customer Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customer Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Customer Id</em>' attribute.
+	 * @see #setCustomerId(int)
+	 * @see HairDressersRegistrationSystem.hairDressersRegSys.HairDressersRegSysPackage#getCustomer_CustomerId()
+	 * @model
+	 * @generated
+	 */
+	int getCustomerId();
+
+	/**
+	 * Sets the value of the '{@link HairDressersRegistrationSystem.hairDressersRegSys.Customer#getCustomerId <em>Customer Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Customer Id</em>' attribute.
+	 * @see #getCustomerId()
+	 * @generated
+	 */
+	void setCustomerId(int value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void PlaceAppointment();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void AddNewCustomer();
+
+} // Customer

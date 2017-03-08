@@ -10,7 +10,7 @@
       <!-- @generated hairDressersRegSys -->
       <package
             uri="http://www.example.org/hairDressersRegSys"
-            class="hairDressersRegSys.HairDressersRegSysPackage"
+            class="HairDressersRegistrationSystem.hairDressersRegSys.HairDressersRegSysPackage"
             genModel="model/hairDressersRegSys.genmodel"/>
    </extension>
 
