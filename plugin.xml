@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated hairDressersRegSys -->
+      <package
+            uri="http://www.example.org/hairDressersRegSys"
+            class="hairDressersRegSys.HairDressersRegSysPackage"
+            genModel="model/hairDressersRegSys.genmodel"/>
+   </extension>
+
+</plugin>

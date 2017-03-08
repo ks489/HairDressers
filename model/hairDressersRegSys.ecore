@@ -6,18 +6,16 @@
     <eOperations name="AddService"/>
     <eOperations name="RemoveService"/>
     <eOperations name="ViewAllServices"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="appointment" upperBound="-1"
-        eType="#//Appointment" eOpposite="#//Appointment/service"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CostPerHour" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appointment" lowerBound="1"
+        upperBound="-1" eType="#//Appointment" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Appointment">
     <eOperations name="ViewSchedule"/>
     <eOperations name="AddAppointment"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="service" lowerBound="1"
-        upperBound="-1" eType="#//Service" eOpposite="#//Service/appointment"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="invoice" lowerBound="1"
         eType="#//Invoice" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
